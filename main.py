@@ -76,11 +76,11 @@ class Curiculum:
         print("\tRethinkDB, Javascript, HTML/CSS, PHP, MySQL")
         print("\n")
         print("LEARNING :")
-        print("\tC++")
+        print("\tC++ (Qt5)")
         print("\n")
         print("SOFTWARE USED :")
-        print("\tPycharm, Atom, Visual Studio")
-        print("\tGit, GitHub, Trello")
+        print("\tPycharm, Atom")
+        print("\tGit, GitHub")
         print("\tSlack, Discord, HackPad")
         print("\tSolidWorks, Cura, Pronterface")
         print("\tGimp")
@@ -120,7 +120,7 @@ class Curiculum:
         print("3 - Simplon.co")  # http://simplon.co/
         print("\n")
         print("If you want, I can open any of this link for you.")
-        print("Wish one do you want ? [0/1/2/3] or [A/a]ll ?")
+        print("Which one do you want ? [0/1/2/3] or [A/a]ll ?")
         user_choice = input()
         try:
             if user_choice in "Aa":
