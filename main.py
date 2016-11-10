@@ -15,9 +15,10 @@ class Curiculum:
                                   "--experience": self.experience,
                                   "--diplomas": self.formation,
                                   "--civilstatus": self.info,
-                                  "--link": self.link,
+                                  "--links": self.link,
                                   "--contact": self.contact,
-                                  "--clear": self.clear
+                                  "--clear": self.clear,
+                                  "--exit": self.exit
                                   }
 
         self.links = ["https://github.com/TheSystem-69",
@@ -39,7 +40,7 @@ class Curiculum:
         print("-h,   --help")
         print("-com, --competencies")
         print("-ci,  --civilstatus")
-        print("-ex,  --expriences")
+        print("-ex,  --experiences")
         print("-di,  --diplomas")
         print("-con, --contact")
         print("-cl,  --clear")
@@ -52,16 +53,22 @@ class Curiculum:
 
     def parse_input(self, user_input):
         understand_cmd = False
-        for key in self.function_switcher.keys():
-            if user_input in key:
-                understand_cmd = True
-                print("\n")
-                self.function_switcher[key]()
-                print("\n")
-                break
-        if not understand_cmd:
+        if user_input == "":
             print("\nUnknown Command\n")
+        else:
+            for key in self.function_switcher.keys():
+                if user_input in key:
+                    understand_cmd = True
+                    print("\n")
+                    self.function_switcher[key]()
+                    print("\n")
+                    break
+            if not understand_cmd:
+                print("\nUnknown Command\n")
         self.input()
+
+    def exit(self):
+        sys.exit(0)
 
     def competencies(self):
         print("SPOKEN LANGUAGES :")
@@ -87,14 +94,14 @@ class Curiculum:
         print("\n")
         print("OTHER :")
         print("\tScrum, TDD...")
-        print("\tHardware")
+        print("\tHardware, 3D printing...")
 
     def experience(self):
         print("\t\t2016")
         print("Assistant facilitateur")
         print("Simplon.VE - Le Cheylard")
 
-        print("\n\t\t2013 - 2015")
+        print("\n\t  2013 - 2015")
         print("Appui informatique & technicien pôle web")
         print("Departement de l'ardeche - Privas")
 
@@ -120,12 +127,14 @@ class Curiculum:
         print("3 - Simplon.co")  # http://simplon.co/
         print("\n")
         print("If you want, I can open any of this link for you.")
-        print("Which one do you want ? [0/1/2/3] or [A/a]ll ?")
+        print("Which one do you want ? [0/1/2/3] or [A/a]ll or [N/n]othing ?")
         user_choice = input()
         try:
             if user_choice in "Aa":
                 for i in range(len(self.links)):
                     webbrowser.open(self.links[i])
+            elif user_choice in "Nn":
+                pass
             else:
                 webbrowser.open(self.links[int(user_choice)])
         except:
