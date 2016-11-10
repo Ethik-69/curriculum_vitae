@@ -15,9 +15,9 @@ class Curiculum:
                                   "--experience": self.experience,
                                   "--diplomas": self.formation,
                                   "--civilstatus": self.info,
-                                  "--links": self.link,
                                   "--contact": self.contact,
                                   "--clear": self.clear,
+                                  "--links": self.link,
                                   "--exit": self.exit
                                   }
 
@@ -43,7 +43,6 @@ class Curiculum:
         print("-ex,  --experiences")
         print("-di,  --diplomas")
         print("-con, --contact")
-        print("-cl,  --clear")
         print("-li,  --links")
 
     def input(self):
@@ -101,7 +100,7 @@ class Curiculum:
         print("Assistant facilitateur")
         print("Simplon.VE - Le Cheylard")
 
-        print("\n\t  2013 - 2015")
+        print("\n\t     2013 - 2015")
         print("Appui informatique & technicien pôle web")
         print("Departement de l'ardeche - Privas")
 
