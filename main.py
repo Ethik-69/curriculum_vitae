@@ -10,6 +10,7 @@ if sys.version_info.major == 2:
 
 class Curiculum:
     def __init__(self):
+        self.username = os.getlogin()
         self.function_switcher = {"--help": self.help,
                                   "--competencies": self.competencies,
                                   "--experience": self.experience,
@@ -17,6 +18,7 @@ class Curiculum:
                                   "--civilstatus": self.info,
                                   "--contact": self.contact,
                                   "--clear": self.clear,
+                                  "--nature": self.nature,
                                   "--links": self.link,
                                   "--exit": self.exit
                                   }
@@ -41,12 +43,13 @@ class Curiculum:
         print("-com, --competencies")
         print("-ci,  --civilstatus")
         print("-ex,  --experiences")
+        print("-na,  --nature")
         print("-di,  --diplomas")
         print("-con, --contact")
         print("-li,  --links")
 
     def input(self):
-        print("User@ethik's_place:~$"),
+        print("%s@ethik's_CV:~$" % self.username),
         user_input = input()
         self.parse_input(user_input)
 
@@ -97,7 +100,7 @@ class Curiculum:
 
     def experience(self):
         print("\t\t2016")
-        print("Assistant facilitateur")
+        print("Assistant facilitateur (Formateur)")
         print("Simplon.VE - Le Cheylard")
 
         print("\n\t     2013 - 2015")
@@ -145,6 +148,15 @@ class Curiculum:
         print("06 13 56 29 94")
         print("E-MAIL : ethancmk[at]hotmail[dot]com")
 
+    def nature(self):
+        print("Active listening")
+        print("Picky - Astute")
+        print("Caring - Careful")
+        print("Openness - sensitive")
+        print("Thoughtful - Pugnacious")
+        print("Autodidact - Passionate")
+        print("headstrong - Adaptability")
+
     def clear(self):
         os.system("clear")
         self.intro()
@@ -152,3 +164,6 @@ class Curiculum:
 
 if __name__ == "__main__":
     cv = Curiculum()
+
+
+# TODO: User = real user !!!
