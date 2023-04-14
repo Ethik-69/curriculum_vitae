@@ -102,12 +102,13 @@ class Curiculum:
             "\tRethinkDB, Javascript, HTML/CSS, MySQL (But i hate it.)\n"
         )
 
-        print("TECHNO :\n" "\tAWS\n")
+        print("TECHNO :\n" "\tAWS, CDK, Docker\n")
 
-        print("BASIC USE KNOWLEDGE :\n" "\tDocker, Kubernetes\n")
+        print("BASIC USE KNOWLEDGE :\n" "\tKubernetes\n")
 
         print(
             "SOFTWARE USED :\n"
+            "\tJenkins\n"
             "\tPycharm, Atom, VSCode\n"
             "\tGit, GitHub\n"
             "\tSlack, Discord, Google suite\n"
@@ -117,7 +118,9 @@ class Curiculum:
 
     def experience(self):
         print(f"{'*' * 20} EXPERIENCES {'*' * 20} \n")
-        print("\t     2018 - Today\n" "Consultant Cloud DevOps\n" "Gekko - Toulouse\n")
+        print("\t     2018 - Today\n" "Consultant Cloud DevOps ++\n" "Airbus - Toulouse\n")
+
+        print("\t     2018 - 31 Dec 2022\n" "Consultant Cloud DevOps\n" "Gekko - Toulouse\n")
 
         print("\t\t2016\n" "Assistant Teacher\n" "Simplon.VE - Le Cheylard\n")
 
@@ -144,8 +147,8 @@ class Curiculum:
         print(
             "LAST NAME : CHAMIK\n"
             "FIRST NAME : ETHAN\n"
-            "JOB : DEVELOPPER\n"
-            "AGE : 28 YEARS OLD\n"
+            "JOB : DEVOPS\n"
+            "AGE : 31 YEARS OLD\n"
             "FRENCH"
         )
 
